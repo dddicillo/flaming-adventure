@@ -1,13 +1,14 @@
 /* DIV STYLING */
-/*div#gamearea {
+div#gamearea {
 	height: 200px;
-	width: 200px;
-}*/
+	width: 350px;
+	float: right;
+}
 
-div#row {
+/*div#row {
 	height: 50px;
 	width: 200px;
-}
+}*/
 
 div#playertile {
 	height: 50px;

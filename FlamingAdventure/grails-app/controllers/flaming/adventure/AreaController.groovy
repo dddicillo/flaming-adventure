@@ -21,9 +21,9 @@ class AreaController {
 
     def create() {
         def terrain = new Area(this.class.classLoader.getResourceAsStream("terrain.txt"))
-        int x = 2
-        int y = 1
-        [grid: terrain.areaGrid, rows: terrain.rows, columns: terrain.columns, playerX: x, playerY: y]
+        int playerX = 1
+        int playerY = 2
+        [grid: terrain.areaGrid, rows: terrain.rows, columns: terrain.columns, playerX: 1, playerY: 2]
     }
 
     @Transactional

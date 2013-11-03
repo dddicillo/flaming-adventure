@@ -4,11 +4,11 @@
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'area.css')}" type="text/css">
 </head>
 	<body>
-		<div id="gamearea" name="gamearea" height="<%= rows * 50 %>px" depth="<%= columns * 50 %>px">
+		<div id="gamearea" name="gamearea">
 		
 		<% i = 0 %>
 		<% grid.each { row -> %>
-			<div id="row">
+			<div id="row" width="<%= columns * 20 %>px">
 			
 			<% j = 0 %>
 			<% row.each { entry -> %>
