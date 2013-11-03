@@ -39,8 +39,14 @@ class AreaController {
 
     }
 
+    def storage() {
+        def grid = new Area(this.class.classLoader.getResourceAsStream("colorboard.txt"))
+        [grid: grid.areaGrid, rows: grid.rows, columns: grid.columns]
+    }
+
     def colors() {
         def colorboard = new Area(this.class.classLoader.getResourceAsStream("colorboard.txt"))
+        [grid: colorboard.areaGrid, rows: colorboard.rows, columns: colorboard.columns]
     }
 
     def dungeon() {

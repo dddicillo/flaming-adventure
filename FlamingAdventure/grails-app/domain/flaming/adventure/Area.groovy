@@ -5,10 +5,6 @@ class Area {
     static constraints = {
     }
 
-    enum terrainType {
-    	WATER(0),
-    	GRASS(1)
-    }
     public int rows
     public int columns
 

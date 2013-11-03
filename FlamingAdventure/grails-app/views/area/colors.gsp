@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'area.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'colors.css')}" type="text/css">
 </head>
     <body>
         <div id="mainframe">
@@ -24,28 +24,28 @@
                             <div id="redtile"><%= "$j $i $entry" %></div>
                         </g:elseif>
                         <g:elseif test="${entry == '2'}">
-                            <div id="greentile"></div>
+                            <div id="greentile"><%= "$j $i $entry" %></div>
                         </g:elseif>
                         <g:elseif test="${entry == '3'}">
-                            <div id="bluetile"></div>
+                            <div id="bluetile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '4'}">
-                            <div id="yellowtile"></div>
+                            <div id="yellowtile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '5'}">
-                            <div id="orangetile"></div>
+                            <div id="orangetile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '6'}">
-                            <div id="purpletile"></div>
+                            <div id="purpletile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '7'}">
-                            <div id="pinktile"></div>
+                            <div id="pinktile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '8'}">
-                            <div id="blacktile"></div>
+                            <div id="blacktile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                         <g:elseif test="${entry == '9'}">
-                            <div id="browntile"></div>
+                            <div id="browntile"><%= "$j $i $entry" %></div>
                         </g:elseif> 
                     </g:else>
                     <% j++ %>
