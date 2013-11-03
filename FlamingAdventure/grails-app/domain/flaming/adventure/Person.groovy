@@ -3,9 +3,10 @@ package flaming.adventure
 class Person {
 
 
-	private int posX;
-	private int posY;
-	private String name;
+	public int posX;
+	public int posY;
+	public String kind;
+	public int strength;
 	//private char status = 'x';
 
 	//Person(int x, int y, String name) {
@@ -30,12 +31,12 @@ class Person {
 		posX -= 1;
 	}
 
-	String getName() {
-		return this.name
+	String getKind() {
+		return this.kind
 	}
 
-	void setName(String name) {
-		this.name = name
+	void setKind (String kind) {
+		this.kind = kind
 	}
 
 	int getPosX() {
@@ -54,5 +55,47 @@ class Person {
 		this.posY = posY
 	}
 
+	void setStrength(int strength) {
+		this.strength = strength
+	}
+
+	int getStrength() {
+		return this.strength
+	}
+
+
+
+	void moveMonster(Random random, Area terrain, List<List> presentAreaGrid) {
+        int direction = random.nextInt(5)
+        int x = this.getPosX()
+        int y = this.getPosY()
+        switch (direction) {
+            case 0:
+				if (terrain.validMove(x, y-1) && (presentAreaGrid.get(y-1).get(x) == '1')) {
+                    this.moveUp()
+                    break
+                }
+            case 1:
+                if (terrain.validMove(x+1, y) && (presentAreaGrid.get(y).get(x+1) == '1')) {
+                    this.moveRight()
+                    break
+                }
+            case 2:
+                if (terrain.validMove(x, y+1) && (presentAreaGrid.get(y+1).get(x) == '1')) {
+                    this.moveDown()
+                    break
+                }
+            case 3:
+                if (terrain.validMove(x-1, y) && (presentAreaGrid.get(y).get(x-1) == '1')) {
+                    this.moveLeft()
+                    break
+                }
+            default:
+            	// stay right where you are
+            	this.setPosX(x)
+            	this.setPosY(y)
+
+        }
+    }
 
 }

@@ -26,6 +26,20 @@ div#playertile {
 	background-color: red;
 }
 
+div#monstertile {
+	height: 50px;
+	width: 50px;
+	float: left;
+	background-color: black;
+}
+
+div#doortile {
+	height: 50px;
+	width: 50px;
+	float: left;
+	background-color: brown;
+}
+
 div#emptytile {
 	height: 50px;
 	width: 50px;

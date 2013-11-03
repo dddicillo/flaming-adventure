@@ -12,9 +12,34 @@ class Area {
     public int rows
     public int columns
 
-    private List<List> areaGrid = new ArrayList()
+    public List<List> areaGrid
+
+    int getRows () {
+      return this.rows
+    }
+
+    void setRows (int rows) {
+        this.rows = rows
+    }
+
+    int getColumns() {
+      return this.columns
+    }
+
+    void setColumns(int columns) {
+      this.columns = columns
+    }
+
+    def getAreaGrid() {
+      return this.areaGrid
+    }
+
+    void setAreaGrid(List<List> areaGrid) {
+      this.areaGrid = areaGrid
+    }
 
     Area(InputStream terrainFile) {
+      this.areaGrid = new ArrayList()
     	terrainFile.eachLine { line ->
    			List row = new ArrayList()
         int currentColumns = 0
@@ -43,7 +68,16 @@ class Area {
     }
 
     boolean validMove(int x, int y) {
-      return (x >= 0 && y >= 0 && x < columns && y < rows && areaGrid.get(y).get(x) == '1')
+      //return (x >= 0 && y >= 0 && x < columns && y < rows && areaGrid.get(y).get(x) == '1')
+      //return (x >= 0 && y >= 0 && x < columns && y < rows && answer)
+      if (x < 0 || y < 0) {
+        return false
+      } else if (x >= columns || y >= rows) {
+        return false
+      } else {
+        return true
+      }
+      
     }
 
 }
