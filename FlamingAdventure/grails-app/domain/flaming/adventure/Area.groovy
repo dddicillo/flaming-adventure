@@ -41,4 +41,9 @@ class Area {
       }
       this.columns = columns
     }
+
+    boolean validMove(int x, int y) {
+      return (areaGrid.get(y).get(x) == '1')
+    }
+
 }
