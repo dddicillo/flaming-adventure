@@ -43,7 +43,7 @@ class Area {
     }
 
     boolean validMove(int x, int y) {
-      return (areaGrid.get(y).get(x) == '1')
+      return (x >= 0 && y >= 0 && x < columns && y < rows && areaGrid.get(y).get(x) == '1')
     }
 
 }

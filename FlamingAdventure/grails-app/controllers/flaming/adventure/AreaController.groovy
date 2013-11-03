@@ -13,11 +13,11 @@ class AreaController {
         respond Area.list(params), model:[areaInstanceCount: Area.count()]
     }
 
-    def show(Area areaInstance) {
-        respond areaInstance
+    def colors() {
+        def colorboard = new Area(this.class.classLoader.getResourceAsStream("colorboard.txt"))
     }
 
-    def create() {
+    def dungeon() {
         def terrain = new Area(this.class.classLoader.getResourceAsStream("terrain.txt"))
         int playerX = 1
         int playerY = 2
