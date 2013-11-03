@@ -20,7 +20,8 @@ class AreaController {
     }
 
     def create() {
-        respond new Area(params)
+        def terrain = new Area(this.class.classLoader.getResourceAsStream("terrain.txt"))
+        [grid: terrain.areaGrid]
     }
 
     @Transactional
